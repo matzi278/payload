@@ -169,6 +169,15 @@ export interface MessageField {
   message: unknown
 }
 
+export interface UploadField {
+  blockName?: string
+  blockType: 'upload'
+  label?: string
+  name: string
+  required?: boolean
+  width?: number
+}
+
 export type FormFieldBlock =
   | CheckboxField
   | CountryField
@@ -179,6 +188,7 @@ export type FormFieldBlock =
   | StateField
   | TextAreaField
   | TextField
+  | UploadField
 
 export interface Email {
   bcc?: string
